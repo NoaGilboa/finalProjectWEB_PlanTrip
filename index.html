@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Day Route Trips</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <h1>Plan Your Trip</h1>
+    <form id="roadTripForm">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br><br>
+        <label for="tripType">Transportation:</label>
+        <select id="tripType" name="tripType">
+            <option value="car">Car</option>
+            <option value="bike">Bike</option>
+            <option value="foot">Foot</option>
+        </select><br><br>
+        <button type="submit">Generate trip</button>
+    </form>
+
+    <!-- Trip Selector will be shown after form submission -->
+    <select id="tripSelector" style="display:none;">
+        <option value="trip1">Trip 1</option>
+        <option value="trip2">Trip 2</option>
+        <option value="trip3">Trip 3</option>
+    </select>
+    <button id="loadButton" style="display:none;">Load Trip</button>
+    <!-- Div where the Leaflet map will be rendered -->
+<div id="map" style="height: 400px; width: 600px; float: left;"></div>
+<div id="imageContainer" style="width: 400px; height: 400px; float: left;"></div>
+</body>
+</html>
